@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행갈까요</title>
+   <style>
+         body{
+             text-align: center;
+             margin : 0;
+        }
+        .nav-container{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin: 0;
+            padding : 0;
+            background-color: rgb(240, 184, 193);
+            list-style-type: none;
+        }
+        .nav-item{
+            padding: 15px;
+            cursor: pointer;
+        }
+        .nav-item a{
+            text-align: center;
+            text-decoration: none;
+            color:black;
+        }
+        .nav-item:nth-child(1){
+            background-color:rgb(156, 200, 221);
+        }
+        .nav-item:hover {
+            background-color:rgb(185, 179, 179);
+        }
+        .nav-container{
+            position: fixed;
+            top: 0;
+        }
+        header{
+            margin-top: 80px;
+        }
+        h1{
+            text-align: left;
+            font-size: 80px;
+            word-spacing : 40 px;
+            font-family: "fantasy";
+            color:honeydew;
+            text-shadow: -1px 0 darkblue, 0 1px darkblue, 1px 0 darkblue, 0 -1px darkblue;
+        }
+        h2{
+            text-align: left;
+            font-size: 50px;
+            font-family: "fantasy";
+        }
+        h3{
+            text-align: left;
+            font-family: "cursive";
+        }
+        html{
+            background: url("https://i.imgur.com/ZZ2bAYy.jpg") no-repeat center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        div{
+            color:rgb(24, 20, 20);
+            background-color: #ffffff;
+            background-color: rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body>
+    <header><h1>"여행갈까요"</h1></header>
+
+    <nav>
+        <ul class="nav-container">
+            <li class="nav-item"><a href="{%url 'update'%}">NEW여행지추가</a></li>
+            <li class="nav-item"><a href="">준비중입니다</a></li>
+            <li class="nav-item"><a href="">준비중입니다</a></li>
+            <li class="nav-item"><a href="">준비중입니다</a></li>
+            <li class="nav-item"><a href="">준비중입니다</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

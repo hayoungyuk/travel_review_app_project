@@ -1,0 +1,14 @@
+{%extends 'basement.html'%}
+
+{% block content %}
+
+<h1>새로운 여행지를 수정하세요</h1>
+
+<form action="{%url 'reupdate' travelapp.id %}" method="post">
+    {%csrf_token%}
+    <p>여행지: <input type="text" name="head" value = "{{travelapp.head}}"></p>
+    <p>여행꾼: <input type="text" name="traveler" value = "{{travelapp.traveler}}"></p>
+    설명: <textarea name="content" id="" cols="30" rows="10">{{travelapp.content}}</textarea>
+    <button type="upload"> upload</button>
+</form>
+{% endblock %}

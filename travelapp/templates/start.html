@@ -1,0 +1,18 @@
+{%extends 'basement.html'%}
+
+{% block content %}
+    <header><h2>어디로 갈까요?</h2></header>
+
+    <p>
+    <div class="container">
+    {% for travelapp in travelapps%}
+            <div>
+            <h3>{{travelapp.head}}</h3>
+            <h3>{{travelapp.traveler}}</h3>
+            <h3>{{travelapp.summary}}</h3> 
+            <h3><a href = "{%url 'click' travelapp.id%}">자세히 보기</a></h3>
+            <br>
+            </div>>
+    {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{%extends 'basement.html'%}
+
+{% block content %}
+
+<h1>{{travelapp.head}}</h1>
+<div>
+<p>여행꾼 : {{travelapp.traveler}}</p>
+<p>작성일 : {{travelapp.load_date}}</p>
+</div>
+<hr>
+<p>{{travelapp.content}}</p>
+<a href="{% url 'fix' travelapp.id %}">수정하기</a>
+<a href="{% url 'erase' travelapp.id %}">삭제하기</a>
+{% endblock %}

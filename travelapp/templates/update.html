@@ -1,0 +1,14 @@
+{%extends 'basement.html'%}
+
+{% block content %}
+
+<h1>새로운 여행지를 쓰세요</h1>
+
+<form action="{%url 'made'%}" method="post">
+    {%csrf_token%}
+    <p>여행지: <input type="text" name="head"></p>
+    <p>여행꾼: <input type="text" name="traveler"></p>
+    설명: <textarea name="content" id="" cols="30" rows="10"></textarea>
+    <button type="upload"> upload</button>
+</form>
+{% endblock %}
