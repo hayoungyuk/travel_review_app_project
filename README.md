@@ -1,7 +1,7 @@
 # portfolio
 21.05.01~
 
-멋쟁이 사자처럼 9기 -django proj
+멋쟁이 사자처럼 9기 -django proj -- 개인
 
 주제: 여행지 추천 공유 사이트
 
